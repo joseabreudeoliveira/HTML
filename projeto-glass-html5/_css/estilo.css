@@ -1,0 +1,218 @@
+/*Formata carcteres especiais*/
+@charset "UTF-8";
+/*Utilizando fontes do site da goolge*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;600&display=swap');
+/*Utilizando fontes externas*/
+@font-face{
+    font-family: 'FonteLogo';
+    src: url("/_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+    font-family:Arial, sans-serif;
+    background-color:#dddddd; 
+    color: rgba(0, 0, 0, 0.0.1); 
+ }
+ div#interface{
+    width: 1100px;
+    background-color:#ffffff; 
+    margin: -20px auto 0px auto;   /*Determina os tamanhos acima, a direita, a baixo a esquerda*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /*Cria sobra envolta do objeto deslocamento lateral*/
+                                                   /*,deslocamento vertical, espalhamento da sombra e cor da sombra*/
+    padding: 10px 10px 10px 10px;  /*Espaçamento interno do objeto*/   
+                                   /* como os 4 valores são iguais poderia informar uma unica vez*/
+                                   /*Ex.: padding: 10px;*/
+}
+ p {
+    text-align: justify; 
+    text-indent: 50px;
+   }
+a {
+    color: #606060;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+header#cabecalho img#icone{
+   position: absolute;
+   left: 1070px;
+   top: 70px;
+} 
+header#cabecalho {
+    border-bottom: 1px #606060 solid;   /*Configura borda largura, cor e formato*/
+    height: 150px;                        /*Configura a altura do cabecalho*/
+    /* o comando abaixo não funcionou corrigir*/
+    background: url("/_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;  /*Coloca a logomarca por traz do cabecalho*/
+}
+header#cabecalho h1 {
+    /*font-family: Arial, sans-serif;*/  /*Assim usamos os fontes normais*/
+    font-family: 'FonteLogo', sans-serif;  /*Assim usamos os fontes externos, de arquivos de fontes*/
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    padding: 0;            /*Espaço Margem interna*/
+    margin-bottom: 0px;    /*Espaço Margem externa*/
+}
+header#cabecalho h2 {
+    /*font-family: Arial, sans-serif;*/ /* Formata o texto com fontes do sistema*/
+    font-family: 'Titillium Web', sans-serif; /* Formata o texto com fontes do sistema*/
+    font-size: 15pt;
+    color: #888888;
+    padding: 0;        /*Espaço Margem interna*/
+    margin-top: 0px;   /*Espaço Margem externa*/
+}
+/*Formatação de imagens com legendas*/
+figure.foto-legenda{
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+figure.foto-legenda img{
+ width: 100%;
+ height: 100%;
+} figure.foto-legenda figcaption{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: 1s;
+}
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+}
+/*Formatção do Menu*/
+nav#menu {
+   display: block; /*Para o menu ir para a parte de cima da pagina*/
+}
+
+nav#menu ul {
+
+   list-style: none;          /*Some com as bolinhas*/
+   text-transform: uppercase; /*Converte o menu para maiusculo*/
+   position: absolute;        /*Para o menu flutuar fora da caixa*/
+   top: -20px;                  /*Posicionando o menu*/
+   left: 300px;               /*Posicionando o menu*/
+}
+
+nav#menu li {
+
+   display: inline-block;            /*Coloca o menu em linha*/
+   background: #dddddd;            /*Cor do fundo do menu*/
+   padding: 10px;                    /*Dimenciona o tamanho da caixa da cor do fundo do menu*/
+   margin: 2px;                      /*Dimenciona a margem entre os botões do menu*/
+   transition: background-color 1s;  /*Muda a cor de fundo dos botões de menu ao passar o mouse lentamente*/
+
+}
+nav#menu li:hover {
+    background-color: #606060;  /*Muda a cor de fundo dos botões de menu ao passar o mouse*/
+}
+nav#menu h1{               /*Oculta o h1 dentro de menu*/
+    display: none;       
+}
+nav#menu a {
+    color: #000000;      /*Muda a cor da descrição do Menu para Preto*/
+    text-decoration: none; /*Remove o sublinhado da descrição do menu*/
+}
+nav#menu a:hover{
+    color: #ffffff;      /*Muda a cor da descrição do Menu para branco ao passar o mouse*/
+    text-decoration: underline; /*Põe o sublinhado da descrição do menu ao passar o mouse*/
+}
+section#corpo{
+   display: block;
+   width: 550px;
+   float: left;
+   border-right: 1px solid #606060;  /*Parametros são largura, tipo de linha e cor*/
+   padding-right: 15px;                /*Configura a mar direita do texto do corpo para desgrudar da linha*/
+}
+article#noticia-principal h2 {
+   font-size: 13pt;
+   color: #606060;
+   background-color: #dddddd;
+   padding: 5px 0px 5px 10px;
+   margin: 10px 0px 10px 0px;
+}
+header#cabecalho-artigo h1 {
+   font-family: 'Fonte-Logo', sans-serif;
+   font-size: 20pt;
+   color:#606060;
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+.direita{
+    text-align: right;
+}
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color:#cecece;
+    background-color: #ffffff;
+    margin 0px;
+}
+header#cabecalho-artigo h3 {
+   
+}
+table#tabelaspec{
+   border: 1px solid #606060;        /*Borda da tabeela*/
+   border-spacing: 0px;                /*Espaço entre as Borda das Celulas*/
+   margin-left: auto;                  /*Centraliza a tabela*/
+   margin-right: auto;                 /*Centraliza a tabela*/
+}
+Table#tabelaspec td {
+   border: 1px solid #606060;        /*Borda das celulas*/
+   padding: 10px;                      /*Aumenta o espaço interno da celula*/
+}
+Table#tabelaspec td.ce {
+    color:#ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    text-align: right;
+    font-weight: bold;
+}
+Table#tabelaspec td.cd {
+    background-color: #cecece;
+}
+Table#tabelaspec caption {
+    color:#888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+Table#tabelaspec caption span{
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+aside#lateral{
+    display: block;
+    width: 500px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.0.5);
+}
+aside#lateral h1{
+    font-family: 'Fonte-Logo', sans-serif;
+    font-size: 20px;
+    color: #606060;
+    margin-top: 0px;
+}
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13px;
+    color: #ffffff;
+    padding: 10px;
+}
+footer#rodape{
+    clear: both;
+    border-top: 1px solid #606060;
+}
+footer#rodape p {            /*Centraliza o rodape*/
+    text-align:center;
+}

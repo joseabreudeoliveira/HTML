@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Teste JavaScript</title>
+        <meta charset="utf-8"/>
+        <script>
+            var quebrada = false;
+            function mudaLampada(tipo) { /*Tudo entre ()) são parametros e entre {} codigo*/
+               if (!quebrada) {
+                  document.getElementById("Luz").src = "projeto-glass-html5/_imagens/" + tipo +".jpg";
+                  if (tipo == 'lampada-quebrada') {
+                   quebrada = true;
+                  }
+               }
+            }
+        </script>
+    </head>
+    <body>
+       <h1>Acenda a lampada</h1>
+      <img src="projeto-glass-html5/_imagens/lampada-apagada.jpg" id="Luz" 
+            onmousemove="mudaLampada('lampada-acesa')" 
+            onmouseout="mudaLampada('lampada-apagada')"
+            onclick="mudaLampada('lampada-quebrada')"/>
+    </body>
+</html>
